@@ -1,0 +1,28 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="uwosh.hrjobposting">
+
+  <!-- configure your content components here -->
+  
+  <!-- -*- extra stuff goes here -*- -->
+  <class class=".unclassifiedjob.UnclassifiedJob">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IUnclassifiedJob"
+        />
+  </class>
+  <class class=".transferjob.TransferJob">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ITransferJob"
+        />
+  </class>
+  <class class=".classifiedjob.ClassifiedJob">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IClassifiedJob"
+        />
+  </class>
+
+</configure>

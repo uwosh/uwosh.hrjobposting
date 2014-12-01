@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="uwosh.hrjobposting">
+<body>
+    <div metal:fill-slot="main">
+        <metal:block metal:define-macro="header">
+        	<h1 tal:content="context/title"/>
+	    </metal:block>
+        <tal:main-macro metal:define-macro="main">
+			<tal:block define="pd context/positiondescription" 
+					condition="python:context.getPositiondescription().getSize() > 0">
+			<p>
+				<a href="" tal:attributes="href python:pd.absolute_url()" >
+					Download or view the position description [PDF]
+				</a>
+			</p>
+			</tal:block>
+			<div tal:content="structure context/jobinfo" />
+			<h3>Summary</h3>
+			<div tal:content="structure context/jobsummary" />
+			<h3>Job Duties</h3>
+			<div tal:content="structure context/jobduties" />
+			<h3>Special Notes</h3>
+			<div>
+				<p>For UW Oshkosh campus safety / security information, visit <a href="http://www.tts.uwosh.edu/dean/campussecurityact/index.html">http://www.tts.uwosh.edu/dean/campussecurityact/index.html</a>, or call the Human Resources Office at 920/424-1166 for a paper copy. A criminal background investigation is required.</p>
+			</div>			
+			<h3>Job Knowledge, Skills and Abilities</h3>
+			<div tal:content="structure context/jobskills" />
+			<h3>How to Apply</h3>
+			<div tal:content="structure context/howtoapply" />
+        </tal:main-macro>
+    </div>
+</body>
+</html>

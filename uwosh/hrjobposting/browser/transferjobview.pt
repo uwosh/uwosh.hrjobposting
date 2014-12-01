@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="uwosh.hrjobposting">
+<body>
+    <div metal:fill-slot="main">
+        <metal:block metal:define-macro="header">
+        	<h1 tal:content="context/title"/>
+	    </metal:block>
+        <tal:main-macro metal:define-macro="main">
+			<tal:block define="pd context/positiondescription" 
+					condition="python:context.getPositiondescription().getSize() > 0">
+			<p>
+				<a href="" tal:attributes="href python:pd.absolute_url()" >
+					Download or view the position description [PDF]
+				</a>
+			</p>
+			</tal:block>
+			<h3>Department</h3>
+			<p tal:content="context/department" />
+			<h3>Work Schedule</h3>
+			<div tal:content="structure context/schedule" />
+			<h3>Special Qualifications</h3>
+			<div tal:content="structure context/qualifications" />
+			<h3>Pay Range</h3>
+			<p tal:content="context/payrange" />		
+			<h3>Application Deadline</h3>
+			<p tal:content="context/deadline" />
+			<h3>How to Apply</h3>
+			<div tal:content="structure context/howtoapply" />
+        </tal:main-macro>
+    </div>
+</body>
+</html>

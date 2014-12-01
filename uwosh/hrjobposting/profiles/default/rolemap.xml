@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+    <!-- -*- extra stuff goes here -*- -->
+    <permission name="uwosh.hrjobposting: Add Unclassified Job" acquire="True">
+    </permission>
+    <permission name="uwosh.hrjobposting: Add Transfer Job" acquire="True">
+    </permission>
+    <permission name="uwosh.hrjobposting: Add Classified Job" acquire="True">
+    </permission>
+  </permissions>
+</rolemap>

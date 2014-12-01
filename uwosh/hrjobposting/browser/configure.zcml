@@ -1,0 +1,40 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="uwosh.hrjobposting">
+
+  <include package="plone.app.contentmenu" />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+  <browser:page
+      for="*"
+      name="unclassifiedjob_view"
+      class=".unclassifiedjobview.UnclassifiedJobView"
+      template="unclassifiedjobview.pt"
+      allowed_interface=".unclassifiedjobview.IUnclassifiedJobView"
+      permission="zope.Public"
+      />
+
+
+  <browser:page
+      for="*"
+      name="transferjob_view"
+      class=".transferjobview.TransferJobView"
+      template="transferjobview.pt"
+      allowed_interface=".transferjobview.ITransferJobView"
+      permission="zope.Public"
+      />
+
+
+  <browser:page
+      for="*"
+      name="classifiedjob_view"
+      class=".classifiedjobview.ClassifiedJobView"
+      template="classifiedjobview.pt"
+      allowed_interface=".classifiedjobview.IClassifiedJobView"
+      permission="zope.Public"
+      />
+
+
+</configure>
