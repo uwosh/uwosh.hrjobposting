@@ -23,7 +23,7 @@
 			<div tal:content="structure context/jobduties" />
 			<h3>Special Notes</h3>
 			<div>
-				<p>For UW Oshkosh campus safety / security information, visit <a href="http://www.tts.uwosh.edu/dean/campussecurityact/index.html">http://www.tts.uwosh.edu/dean/campussecurityact/index.html</a>, or call the Human Resources Office at 920/424-1166 for a paper copy. A criminal background investigation is required.</p>
+				<p>For UW Oshkosh campus safety / security information, visit <a href="http://www.uwosh.edu/up/reports-statistics">http://www.uwosh.edu/up/reports-statistics</a>, or call the Human Resources Office at 920/424-1166 for a paper copy. A criminal background investigation is required.</p>
 			</div>			
 			<h3>Job Knowledge, Skills and Abilities</h3>
 			<div tal:content="structure context/jobskills" />
